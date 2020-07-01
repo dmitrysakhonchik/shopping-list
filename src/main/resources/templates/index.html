@@ -27,11 +27,11 @@
         </ul>
 
         <form th:action="@{/logout}" sec:authorize="isAuthenticated()" method="post">
-            <button class="btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">EXIT</button>
+            <button class="btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Exit</button>
         </form>
 
         <div class="form-inline my-2 my-lg-0" sec:authorize="isAnonymous()">
-            <a class="btn btn-outline-success my-2 mr-2 my-sm-0" th:href="@{/login}">LOGIN</a>
+            <a class="btn btn-outline-success my-2 mr-2 my-sm-0" th:href="@{/login}">Login</a>
         </div>
     </div>
 </nav>
@@ -39,7 +39,7 @@
 <div class="container">
     <form method="post" th:action="@{/}" th:object="${item}">
         <div class="input-group mb-3 mt-3">
-            <input type="text" class="form-control" placeholder="New purchase name"
+            <input type="text" class="form-control" placeholder="Enter product name"
                    aria-label="New purchase name" aria-describedby="basic-addon2"
                    th:field="*{name}">
             <div class="input-group-append">

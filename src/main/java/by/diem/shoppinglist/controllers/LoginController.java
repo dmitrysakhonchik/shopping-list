@@ -40,7 +40,7 @@ public class LoginController {
             return "register";
         }
         if (!userRepresentation.getPassword().equals(userRepresentation.getRepeatPassword())) {
-            bindingResult.rejectValue("password", "", "Password do not match!");
+            bindingResult.rejectValue("password", "", "Password doesn't match!");
             return "register";
         }
 
