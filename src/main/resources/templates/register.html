@@ -12,11 +12,12 @@
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <title>Registration</title>
+
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">SHOPPING LIST</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -40,18 +41,24 @@
             <form th:action="@{/register}" method="post" th:object="${user}">
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" th:field="*{username}" class="form-control" placeholder="Enter username">
-                    <small class="form-text text-danger" th:each="err : ${#fields.errors('username')}" th:text="${err}">Validation error</small>
+                    <input type="text" id="username" th:field="*{username}" class="form-control"
+                           placeholder="Enter username">
+                    <small class="form-text text-danger" th:each="err : ${#fields.errors('username')}" th:text="${err}">Validation
+                        error</small>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" th:field="*{password}" class="form-control" placeholder="Password">
-                    <small class="form-text text-danger" th:each="err : ${#fields.errors('password')}" th:text="${err}">Validation error</small>
+                    <input type="password" id="password" th:field="*{password}" class="form-control"
+                           placeholder="Password">
+                    <small class="form-text text-danger" th:each="err : ${#fields.errors('password')}" th:text="${err}">Validation
+                        error</small>
                 </div>
                 <div class="form-group">
                     <label for="repeatPassword">Repeat password</label>
-                    <input type="password" id="repeatPassword" th:field="*{repeatPassword}" class="form-control" placeholder="Repeat password">
-                    <small class="form-text text-danger" th:each="err : ${#fields.errors('repeatPassword')}" th:text="${err}">Validation error</small>
+                    <input type="password" id="repeatPassword" th:field="*{repeatPassword}" class="form-control"
+                           placeholder="Repeat password">
+                    <small class="form-text text-danger" th:each="err : ${#fields.errors('repeatPassword')}"
+                           th:text="${err}">Validation error</small>
                 </div>
                 <button type="submit" class="btn btn-primary">Sign up!</button>
             </form>
