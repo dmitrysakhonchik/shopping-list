@@ -1,5 +1,5 @@
-# shopping-list
-Shopping list appication
+# Shopping-list appication
+
 Start application:
 
 git clone https://github.com/dmitrysakhonchik/shopping-list
